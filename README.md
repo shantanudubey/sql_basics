@@ -1,2 +1,5 @@
 # sql_basics
-Learning SQL with MySQL 
+
+Learning SQL concepts.
+
+IDE : MySQL Workbench

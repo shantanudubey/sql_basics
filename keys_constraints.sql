@@ -1,3 +1,5 @@
+# Keys and Constraints : pkey, fkey and other constraints
+
 show databases;
 create database sales;
 # Enables to use customer_info rather than sales.customer_info
@@ -46,13 +48,15 @@ drop table customer_info;
 
 # Create with primary key
 create table customer_info(
-id int auto_increment,
+id int,
 first_name varchar(25),
 last_name varchar(25),
 salary int,
 primary key(id)
 );
 describe customer_info;
+insert into customer_info(id, first_name, last_name, salary) values(9, "John9", "Doe9", 99999);
+insert into customer_info(id, first_name, last_name, salary) values(9, "John9", "Doe9", 99999);
 select * from customer_info;
 drop table customer_info;
 
@@ -109,6 +113,42 @@ select * from employee limit 0, 100;
 
 alter table employee
 drop index uc_employee;
+
+# Drop and Add primary key constraint
+desc employee;
+alter table employee drop primary key;
+desc employee;
+ALTER TABLE employee ADD CONSTRAINT pk_id PRIMARY KEY(id);
+desc employee;
+
+create table person(
+id int not null,
+first_name varchar(25),
+last_name varchar(25),
+age int,
+primary key(id)
+);
+desc person;
+
+insert into person values(1,"John","Doe",32),(2,"John1","Doe1",32);
+select * from person;
+
+create table orders(
+orderid int not null,
+ordernumber int not null,
+id int,
+primary key(orderid),
+foreign key (id) references person(id)
+);
+desc orders;
+insert into orders values(1, 101, 1), (2, 102, 2), (3, 103, 1), (4, 104, 1), (5, 105, 2), (6, 106, 2), (7, 107, 1);
+SELECT * from orders, person where person.id = orders.id;
+
+
+
+
+
+
 
 # DDL : Deleting the created schema as this sql creates and alters the tables as a part of the exercise
 drop table employee;

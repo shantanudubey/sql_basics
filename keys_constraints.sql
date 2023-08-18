@@ -9,14 +9,14 @@ id int, first_name varchar(25), last_name varchar(25)
 show tables;
 
 # Inserting some rows
-insert into customer_info(id, last_name, first_name) values(2, "Naik1", "Krish1");
+insert into customer_info(id, last_name, first_name) values(2, "John1", "Doe1");
 select * from customer_info;
-insert into customer_info(id, last_name, first_name) values(3, "Naik2", "Krish2"), (3, "Naik3", "Krish3");
+insert into customer_info(id, last_name, first_name) values(3, "Doe2", "John2"), (3, "Doe3", "John3");
 select * from customer_info;
 
 # Queries
-select * from customer_info where last_name = "Naik" or (last_name = "Naik1");
-select * from customer_info where last_name = "Naik" and first_name = "Krish";
+select * from customer_info where last_name = "Doe" or (last_name = "John1");
+select * from customer_info where last_name = "Doe" and first_name = "John";
 
 # Delete table
 drop table customer_info;
@@ -33,13 +33,13 @@ primary key(id)
 describe customer_info;
 select * from customer_info;
 
-insert into customer_info(first_name, last_name, salary) values("Krish", "Naik", 20000);
-insert into customer_info(first_name, last_name, salary) values("Krish1", "Naik1", 20000);
+insert into customer_info(first_name, last_name, salary) values("John", "Doe", 20000);
+insert into customer_info(first_name, last_name, salary) values("John1", "Doe1", 20000);
 
 /*	If we insert a record with the id specified and it doesn't exist then it will be inserted.
 	But the auto_increment will resume from that value for the next record
 */
-insert into customer_info(id, first_name, last_name, salary) values(9, "Krish9", "Naik9", 99999);
+insert into customer_info(id, first_name, last_name, salary) values(9, "John9", "Doe9", 99999);
 select * from customer_info;
 
 drop table customer_info;
@@ -98,12 +98,12 @@ desc employee;
 
 # Check constraints
 insert into employee(house_no, pan, first_name, last_name, salary)
- values (1, 1, "Krish", "Naik", 20000);
+ values (1, 1, "John", "Doe", 20000);
 insert into employee(house_no, pan, first_name, last_name, salary)
- values (2, 2, "Krish2", "Naik2", 22000);
+ values (2, 2, "John2", "Doe2", 22000);
  
 insert into employee(house_no, pan, first_name, last_name, salary)
- values (2, 3, "Krish2", "Naik3", 33000);
+ values (2, 3, "John2", "Doe3", 33000);
  
 select * from employee limit 0, 100;
 

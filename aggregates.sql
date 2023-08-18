@@ -34,13 +34,13 @@ insert into bank_details values
 (42,"entrepreneur","divorced","tertiary","yes",2,"yes","no","unknown",5,"may",380,1,-1,0,"unknown","no"),
 (58,"retired","married","primary","no",121,"yes","no","unknown",5,"may",50,1,-1,0,"unknown","no"),
 (43,"technician","single","secondary","no",593,"yes","no","unknown",5,"may",55,1,-1,0,"unknown","no"),
-(41,"admin.","divorced","secondary","no",270,"yes","no","unknown",5,"may",222,1,-1,0,"unknown","no"),
-(29,"admin.","single","secondary","no",390,"yes","no","unknown",5,"may",137,1,-1,0,"unknown","no"),
+(41,"admin","divorced","secondary","no",270,"yes","no","unknown",5,"may",222,1,-1,0,"unknown","no"),
+(29,"admin","single","secondary","no",390,"yes","no","unknown",5,"may",137,1,-1,0,"unknown","no"),
 (53,"technician","married","secondary","no",6,"yes","no","unknown",5,"may",517,1,-1,0,"unknown","no"),
 (58,"technician","married","unknown","no",71,"yes","no","unknown",5,"may",71,1,-1,0,"unknown","no"),
 (57,"services","married","secondary","no",162,"yes","no","unknown",5,"may",174,1,-1,0,"unknown","no"),
 (51,"retired","married","primary","no",229,"yes","no","unknown",5,"may",353,1,-1,0,"unknown","no"),
-(45,"admin.","single","unknown","no",13,"yes","no","unknown",5,"may",98,1,-1,0,"unknown","no"),
+(45,"admin","single","unknown","no",13,"yes","no","unknown",5,"may",98,1,-1,0,"unknown","no"),
 (57,"blue-collar","married","primary","no",52,"yes","no","unknown",5,"may",38,1,-1,0,"unknown","no"),
 (60,"retired","married","primary","no",60,"yes","no","unknown",5,"may",219,1,-1,0,"unknown","no"),
 (33,"services","married","secondary","no",0,"yes","no","unknown",5,"may",54,1,-1,0,"unknown","no"),
@@ -49,27 +49,27 @@ insert into bank_details values
 (32,"blue-collar","single","primary","no",23,"yes","yes","unknown",5,"may",160,1,-1,0,"unknown","no"),
 (25,"services","married","secondary","no",50,"yes","no","unknown",5,"may",342,1,-1,0,"unknown","no"),
 (40,"retired","married","primary","no",0,"yes","yes","unknown",5,"may",181,1,-1,0,"unknown","no"),
-(44,"admin.","married","secondary","no",-372,"yes","no","unknown",5,"may",172,1,-1,0,"unknown","no"),
+(44,"admin","married","secondary","no",-372,"yes","no","unknown",5,"may",172,1,-1,0,"unknown","no"),
 (39,"management","single","tertiary","no",255,"yes","no","unknown",5,"may",296,1,-1,0,"unknown","no"),
 (52,"entrepreneur","married","secondary","no",113,"yes","yes","unknown",5,"may",127,1,-1,0,"unknown","no"),
 (46,"management","single","secondary","no",-246,"yes","no","unknown",5,"may",255,2,-1,0,"unknown","no"),
 (36,"technician","single","secondary","no",265,"yes","yes","unknown",5,"may",348,1,-1,0,"unknown","no"),
 (57,"technician","married","secondary","no",839,"no","yes","unknown",5,"may",225,1,-1,0,"unknown","no"),
 (49,"management","married","tertiary","no",378,"yes","no","unknown",5,"may",230,1,-1,0,"unknown","no"),
-(60,"admin.","married","secondary","no",39,"yes","yes","unknown",5,"may",208,1,-1,0,"unknown","no"),
+(60,"admin","married","secondary","no",39,"yes","yes","unknown",5,"may",208,1,-1,0,"unknown","no"),
 (59,"blue-collar","married","secondary","no",0,"yes","no","unknown",5,"may",226,1,-1,0,"unknown","no"),
 (51,"management","married","tertiary","no",10635,"yes","no","unknown",5,"may",336,1,-1,0,"unknown","no"),
 (57,"technician","divorced","secondary","no",63,"yes","no","unknown",5,"may",242,1,-1,0,"unknown","no"),
 (25,"blue-collar","married","secondary","no",-7,"yes","no","unknown",5,"may",365,1,-1,0,"unknown","no"),
 (53,"technician","married","secondary","no",-3,"no","no","unknown",5,"may",1666,1,-1,0,"unknown","no"),
-(36,"admin.","divorced","secondary","no",506,"yes","no","unknown",5,"may",577,1,-1,0,"unknown","no"),
-(37,"admin.","single","secondary","no",0,"yes","no","unknown",5,"may",137,1,-1,0,"unknown","no"),
+(36,"admin","divorced","secondary","no",506,"yes","no","unknown",5,"may",577,1,-1,0,"unknown","no"),
+(37,"admin","single","secondary","no",0,"yes","no","unknown",5,"may",137,1,-1,0,"unknown","no"),
 (44,"services","divorced","secondary","no",2586,"yes","no","unknown",5,"may",160,1,-1,0,"unknown","no"),
 (50,"management","married","secondary","no",49,"yes","no","unknown",5,"may",180,2,-1,0,"unknown","no"),
 (60,"blue-collar","married","unknown","no",104,"yes","no","unknown",5,"may",22,1,-1,0,"unknown","no"),
 (54,"retired","married","secondary","no",529,"yes","no","unknown",5,"may",1492,1,-1,0,"unknown","no"),
 (58,"retired","married","unknown","no",96,"yes","no","unknown",5,"may",616,1,-1,0,"unknown","no"),
-(36,"admin.","single","primary","no",-171,"yes","no","unknown",5,"may",242,1,-1,0,"unknown","no"),
+(36,"admin","single","primary","no",-171,"yes","no","unknown",5,"may",242,1,-1,0,"unknown","no"),
 (58,"self-employed","married","tertiary","no",-364,"yes","no","unknown",5,"may",355,1,-1,0,"unknown","no"),
 (44,"technician","married","secondary","no",0,"yes","no","unknown",5,"may",225,2,-1,0,"unknown","no"),
 (55,"technician","divorced","secondary","no",0,"no","no","unknown",5,"may",160,1,-1,0,"unknown","no"),
@@ -77,14 +77,14 @@ insert into bank_details values
 (54,"blue-collar","married","secondary","no",1291,"yes","no","unknown",5,"may",266,1,-1,0,"unknown","no"),
 (48,"management","divorced","tertiary","no",-244,"yes","no","unknown",5,"may",253,1,-1,0,"unknown","no"),
 (32,"management","married","tertiary","no",0,"yes","no","unknown",5,"may",179,1,-1,0,"unknown","no"),
-(42,"admin.","single","secondary","no",-76,"yes","no","unknown",5,"may",787,1,-1,0,"unknown","no"),
+(42,"admin","single","secondary","no",-76,"yes","no","unknown",5,"may",787,1,-1,0,"unknown","no"),
 (24,"technician","single","secondary","no",-103,"yes","yes","unknown",5,"may",145,1,-1,0,"unknown","no"),
 (38,"entrepreneur","single","tertiary","no",243,"no","yes","unknown",5,"may",174,1,-1,0,"unknown","no"),
 (38,"management","single","tertiary","no",424,"yes","no","unknown",5,"may",104,1,-1,0,"unknown","no"),
 (47,"blue-collar","married","unknown","no",306,"yes","no","unknown",5,"may",13,1,-1,0,"unknown","no"),
 (40,"blue-collar","single","unknown","no",24,"yes","no","unknown",5,"may",185,1,-1,0,"unknown","no"),
 (46,"services","married","primary","no",179,"yes","no","unknown",5,"may",1778,1,-1,0,"unknown","no"),
-(32,"admin.","married","tertiary","no",0,"yes","no","unknown",5,"may",138,1,-1,0,"unknown","no"),
+(32,"admin","married","tertiary","no",0,"yes","no","unknown",5,"may",138,1,-1,0,"unknown","no"),
 (53,"technician","divorced","secondary","no",989,"yes","no","unknown",5,"may",812,1,-1,0,"unknown","no"),
 (57,"blue-collar","married","primary","no",249,"yes","no","unknown",5,"may",164,1,-1,0,"unknown","no"),
 (33,"services","married","secondary","no",790,"yes","no","unknown",5,"may",391,1,-1,0,"unknown","no"),
@@ -104,40 +104,70 @@ insert into bank_details values
 (55,"services","divorced","secondary","no",91,"no","no","unknown",5,"may",349,1,-1,0,"unknown","no"),
 (49,"services","divorced","secondary","no",0,"yes","yes","unknown",5,"may",272,1,-1,0,"unknown","no"),
 (55,"services","divorced","secondary","yes",1,"yes","no","unknown",5,"may",208,1,-1,0,"unknown","no"),
-(45,"admin.","single","secondary","no",206,"yes","no","unknown",5,"may",193,1,-1,0,"unknown","no"),
+(45,"admin","single","secondary","no",206,"yes","no","unknown",5,"may",193,1,-1,0,"unknown","no"),
 (47,"services","divorced","secondary","no",164,"no","no","unknown",5,"may",212,1,-1,0,"unknown","no"),
 (42,"technician","single","secondary","no",690,"yes","no","unknown",5,"may",20,1,-1,0,"unknown","no"),
-(59,"admin.","married","secondary","no",2343,"yes","no","unknown",5,"may",1042,1,-1,0,"unknown","yes"),
+(59,"admin","married","secondary","no",2343,"yes","no","unknown",5,"may",1042,1,-1,0,"unknown","yes"),
 (46,"self-employed","married","tertiary","no",137,"yes","yes","unknown",5,"may",246,1,-1,0,"unknown","no"),
 (51,"blue-collar","married","primary","no",173,"yes","no","unknown",5,"may",529,2,-1,0,"unknown","no"),
-(56,"admin.","married","secondary","no",45,"no","no","unknown",5,"may",1467,1,-1,0,"unknown","yes"),
+(56,"admin","married","secondary","no",45,"no","no","unknown",5,"may",1467,1,-1,0,"unknown","yes"),
 (41,"technician","married","secondary","no",1270,"yes","no","unknown",5,"may",1389,1,-1,0,"unknown","yes"),
 (46,"management","divorced","secondary","no",16,"yes","yes","unknown",5,"may",188,2,-1,0,"unknown","no"),
 (57,"retired","married","secondary","no",486,"yes","no","unknown",5,"may",180,2,-1,0,"unknown","no"),
 (42,"management","single","secondary","no",50,"no","no","unknown",5,"may",48,1,-1,0,"unknown","no"),
 (30,"technician","married","secondary","no",152,"yes","yes","unknown",5,"may",213,2,-1,0,"unknown","no"),
-(60,"admin.","married","secondary","no",290,"yes","no","unknown",5,"may",583,1,-1,0,"unknown","no");
+(60,"admin","married","secondary","no",290,"yes","no","unknown",5,"may",583,1,-1,0,"unknown","no");
 
 select * from bank_details;
 select * from bank_details where education = "unknown" and marital = "single" and balance < 1000;
+select * from bank_details where age<=60 and job="retired";
+
+# Aggregates
 select avg(balance) from bank_details;
-select * from bank_details where age<=60 and job = "retired";
+select max(balance) from bank_details;
+select min(balance) from bank_details;
+select job, count(*) from bank_details GROUP BY job;
+SELECT education, sum(balance) from bank_details GROUP BY education;
 
-/*
-Questions you can try
-with this data try to fine out sum of balance 
-Try to find out avarage of balance 
-try to find out who is having a min balance 
-try to find out who is having a mazxmim balance 
-try to prepare a list of all the person who is having loan 
-try to find out average balance for all the people whose job role is admin 
-try to find out a record  without job whose age is below 45 
-try to find out a record where education is primarty and person is jobless
-try to find of a record whose bank account is having a negative balance 
-try to find our a record who is not having house at all along with there balance 
-*/
+# Scalars
+SELECT upper(marital) from bank_details where balance > 1000 GROUP BY marital;
+SELECT round(sum(balance)) from bank_details where age < 60 and job = "management" and marital = "single" and education = "tertiary";
+
+# Date and Time
+SELECT now(), current_timestamp(), current_user(), curdate(), current_date(), curtime(), current_time();
+SELECT dayofmonth(now()), monthname(now()), year(now()), dayname(now());
 
 
+# Queries : 
 
+# try to find out sum of balance 
+SELECT sum(balance) from bank_details;
 
+# Try to find out avarage of balance 
+SELECT avg(balance) from bank_details;
+
+# try to find out who is having a min balance
+select * from bank_details where balance = (SELECT min(balance) from bank_details);
+
+# try to find out who is having a max balance 
+SELECT max(balance) FROM bank_details into @maxbal;
+SELECT * FROM bank_details WHERE balance = @maxbal;
+
+# try to prepare a list of all the person who is having loan 
+SELECT * from bank_details where loan = "yes" ORDER BY duration ASC;
+
+# try to find out average balance for all the people whose job role is admin 
+SELECT avg(balance) FROM bank_details WHERE job = "admin";
+
+#try to find out a record without job whose age is below 45 
+SELECT * FROM bank_details WHERE age < 45 AND job = NULL LIMIT 0, 1;
+
+#try to find out a record where education is primary and person is jobless
+SELECT * FROM bank_details WHERE education = "primary" AND job = NULL;
+
+#try to find of a record whose bank account is having a negative balance 
+SELECT * FROM bank_details WHERE balance < 0;
+
+#try to find our a record who is not having house at all along with there balance 
+SELECT * FROM bank_details WHERE housing = "no" AND balance > 0;
 

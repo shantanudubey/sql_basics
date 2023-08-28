@@ -56,7 +56,6 @@ primary key(id)
 );
 describe customer_info;
 insert into customer_info(id, first_name, last_name, salary) values(9, "John9", "Doe9", 99999);
-insert into customer_info(id, first_name, last_name, salary) values(9, "John9", "Doe9", 99999);
 select * from customer_info;
 drop table customer_info;
 
@@ -145,8 +144,33 @@ insert into orders values(1, 101, 1), (2, 102, 2), (3, 103, 1), (4, 104, 1), (5,
 SELECT * from orders, person where person.id = orders.id;
 
 
+create table voters(
+id varchar(25) not null,
+name VARCHAR(35) not null,
+address VARCHAR(50) DEFAULT "",
+ward int not null,
+age int CHECK (age>=18)
+);
+desc voters;
+alter TABLE voters add CONSTRAINT PRIMARY KEY(id);
+desc voters;
 
+INSERT INTO voters(id,name,address,ward,age) values ("ECVD25003202341", "John Doe Main", "HNo., Street, Locality, PIN", 11, 95);
+INSERT INTO voters(id,name,address,ward,age) values ("ECVD25003202342", "John Doe 1", "HNo., Street, Locality, PIN", 11, 33);
+INSERT INTO voters(id,name,address,ward,age) values ("ECVD25003202343", "John Doe 2", "HNo., Street, Locality, PIN", 11, 62);
+INSERT INTO voters(id,name,address,ward,age) values ("ECVD25003202344", "John Doe 3", "HNo., Street, Locality, PIN", 11, 68);
+INSERT INTO voters(id,name,address,ward,age) values ("ECVD25003202345", "John Doe 4", "HNo., Street, Locality, PIN", 11, 38);
+select * from voters;
+# The below line fails because it violates the age check for a voter
+#INSERT INTO voters(id,name,address,ward,age) values ("test_id_age_012", "Test User", "HNo., Street, Locality, PIN", 1, 12);
 
+# Queries : 
+# concat() and aliasing >>
+SELECT concat(name," : ", age) as Details, address from voters;
+
+update voters set ward = 22 where ward = 11;
+select * from voters;
+drop table voters;
 
 
 

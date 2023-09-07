@@ -22,6 +22,7 @@ insert into student.student_info values(7, "107", "John", "Doe", "history", 56);
 insert into student.student_info values(8, "108", "Ariv", "Ladel", "civics", 42);
 insert into student.student_info values(9, "109", "Apple", "Maps", "geography", 52);
 insert into student.student_info values(10, "110", "Google", "Maps", "geography", 73);
+select * from student_info;
 
 # Calling Stored Procedures
 call ranked_students(90);

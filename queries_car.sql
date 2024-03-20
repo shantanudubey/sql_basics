@@ -1,8 +1,8 @@
 
-CREATE DATABASE vehicles;
+CREATE DATABASE if not exists vehicles;
 USE vehicles;
 
-create table manufacturer(
+create table if not exists manufacturer(
 id INT not null,
 name varchar(30),
 country varchar(30),
@@ -34,7 +34,7 @@ insert into manufacturer(id, name, country, status) values
 select * from manufacturer order by id;
 
 
-create table car_segment(
+create table if not exists car_segment(
 id int not null,
 name VARCHAR(20),
 category VARCHAR(25),
@@ -63,7 +63,7 @@ INSERT INTO car_segment(id, name, category) values
 (17, "HSC", "hyper sports car");
 select * from car_segment;
 
-create table fuel_type(
+create table if not exists fuel_type(
 id int not null,
 name VARCHAR(25),
 PRIMARY KEY(id)
@@ -149,19 +149,11 @@ select * from car;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Cleanup
+drop table if exists car;
+drop table if exists manufacturer;
+drop table if exists fuel_type;
+drop table if exists car_segment;
+drop DATABASE if exists vehicles;
 
 

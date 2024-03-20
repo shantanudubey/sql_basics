@@ -1,5 +1,4 @@
 
-
 CREATE DATABASE IF NOT EXISTS bikes;
 use bikes;
 
@@ -51,10 +50,10 @@ select * from bike_info ORDER BY cubic_capacity ASC, name DESC;
 # get the count and average price of motorcycles by cubic_capacity
 select cubic_capacity, count(id), avg(price) from bike_info GROUP BY cubic_capacity ORDER BY cubic_capacity;
 # get the max price of motorcycles by cubic_capacity
-select cubic_capacity, max(price) from bike_info GROUP BY cubic_capacity ORDER BY max(price) DESC;
+select cubic_capacity, count(id), max(price) from bike_info GROUP BY cubic_capacity ORDER BY max(price) DESC;
 
 # HAVING : similar to where clause but must be followed by a group-by clause and can be used with aggregate functions unlike where
-SELECT count(id),cubic_capacity,max(price) from bike_info GROUP BY cubic_capacity HAVING avg(price) > 100000 ORDER BY cubic_capacity ASC;
+SELECT count(id), cubic_capacity, max(price) from bike_info GROUP BY cubic_capacity HAVING avg(price) > 100000 ORDER BY cubic_capacity ASC;
 
 
 # BIT : works like boolean, accepted values are NULL,0,1.
@@ -88,14 +87,14 @@ select DISTINCT name from bike_info WHERE manufacturer = "Yamaha" and exists (se
 SELECT manufacturer,name, cubic_capacity,price,
 CASE
 WHEN cubic_capacity > 90 and cubic_capacity <= 125 THEN "Economy"
-WHEN cubic_capacity > 140 and cubic_capacity <= 160 THEN "Executive"
+WHEN cubic_capacity > 125 and cubic_capacity <= 160 THEN "Executive"
 WHEN cubic_capacity > 160 and cubic_capacity <= 200 THEN "Sports"
 WHEN cubic_capacity > 200 and cubic_capacity <= 500 THEN "Premium"
 ELSE "NA"
 END AS eng_classification
 FROM bike_info ORDER BY name;
 
-SELECT * from bike_info 
+SELECT distinct * from bike_info 
 ORDER BY
 (CASE 
     WHEN is_available = 1 THEN price
@@ -104,7 +103,7 @@ END);
 
 
 # UNION and INTERSECTION >>
-create table riders(
+create table if not exists riders(
 id int AUTO_INCREMENT,
 name VARCHAR(30),
 company varchar(25),
@@ -140,7 +139,7 @@ cubic_capacity int,
 price int,
 PRIMARY KEY(id)
 );
-desc bike_info;
+desc bike_160;
 
 INSERT INTO bike_160(manufacturer, name, cubic_capacity, price) values 
 ("Hero", "Xtreme 160 R 4V", 160, 130000),
@@ -167,24 +166,8 @@ select name, manufacturer from bike_160;
 select * from bike_info where price < (select avg(price) from bike_info where cubic_capacity >= 200) and is_available = 1;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Cleanup
+drop table if exists bike_160;
+drop table if exists bike_info;
+drop table if exists riders;
+drop DATABASE if exists bikes;

@@ -2,6 +2,7 @@ show databases;
 create database if not exists ineuron_fsda;
 use ineuron_fsda;
 
+# '`' allows us to use keywords as column names
 create table if not exists bank_details(
 age int,
 job varchar(30),
@@ -148,6 +149,7 @@ SELECT avg(balance) from bank_details;
 
 # try to find out who is having a min balance
 select * from bank_details where balance = (SELECT min(balance) from bank_details);
+select job, balance from bank_details where balance in (select max(balance) from bank_details);
 
 # try to find out who is having a max balance 
 SELECT max(balance) FROM bank_details into @maxbal;
@@ -171,3 +173,8 @@ SELECT * FROM bank_details WHERE balance < 0;
 #try to find our a record who is not having house at all along with there balance 
 SELECT * FROM bank_details WHERE housing = "no" AND balance > 0;
 
+
+
+# Cleanup
+drop table if EXISTS bank_details;
+ drop DATABASE if EXISTS ineuron_fsda;

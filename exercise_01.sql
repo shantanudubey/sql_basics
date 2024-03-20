@@ -37,3 +37,7 @@ select applicant_id from techmap where tech = "sql" and applicant_id in (
 select applicant_id from techmap where tech = "java"
 ));
 
+
+# Cleanup
+drop table if exists techmap;
+drop database if exists ats;

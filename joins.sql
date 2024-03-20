@@ -1,5 +1,4 @@
 # Joins
-
 create DATABASE if not exists emp_order;
 use emp_order;
 
@@ -11,6 +10,7 @@ CREATE TABLE customers (
    salary DECIMAL (18, 2),       
    PRIMARY KEY (id)
 );
+desc customers;
 
 INSERT INTO customers (id,name,age,city,salary) VALUES
 (1, 'Ramesh', 32, 'Ahmedabad', 26000.00 ),
@@ -51,36 +51,40 @@ INSERT INTO EMPLOYEE VALUES
 select * from employee;
 
 # Inner Join : or EquiJoin, the default join to get the common elements from tables
-select customers.id as "customer-id", customers.name as "customer-name", orders.amount, orders.date as "order-date", orders.id as "order-id", employee.name as "agent" from customers
-INNER JOIN orders
+select customers.id as "customer-id", customers.name as "customer-name", orders.amount, orders.date as "order-date", orders.id as "order-id", employee.name as "agent"
+from customers INNER JOIN orders
 ON customers.id = orders.customer_id
 INNER JOIN employee
 ON  orders.id = employee.id;
 
-
 # Outer Join : 
-select customers.id as "customer-id", customers.name as "customer-name", orders.amount, orders.date as "order-date", orders.id as "order-id", employee.name as "agent" from customers
-LEFT OUTER JOIN orders
+select customers.id as "customer-id", customers.name as "customer-name", orders.amount, orders.date as "order-date", orders.id as "order-id", employee.name as "agent"
+from customers LEFT OUTER JOIN orders
 ON customers.id = orders.customer_id
 LEFT OUTER JOIN employee
 ON  orders.id = employee.id;
 
-select customers.id as "customer-id", customers.name as "customer-name", orders.amount, orders.date as "order-date", orders.id as "order-id", employee.name as "agent" from customers
-RIGHT OUTER JOIN orders
+select customers.id as "customer-id", customers.name as "customer-name", orders.amount, orders.date as "order-date", orders.id as "order-id", employee.name as "agent"
+from customers RIGHT OUTER JOIN orders
 ON customers.id = orders.customer_id
 RIGHT OUTER JOIN employee
 ON  orders.id = employee.id;
 
-# TODO : check the syntax error ????
+# Full Join : implemented as a Union of Left and Right Joins
 select customers.id as "customer-id", customers.name as "customer-name", orders.amount, orders.date as "order-date", orders.id as "order-id", employee.name as "agent"
-FROM customers
-FULL JOIN orders
+from customers LEFT OUTER JOIN orders
 ON customers.id = orders.customer_id
-FULL JOIN employee
+LEFT OUTER JOIN employee
+ON  orders.id = employee.id
+UNION
+select customers.id as "customer-id", customers.name as "customer-name", orders.amount, orders.date as "order-date", orders.id as "order-id", employee.name as "agent"
+from customers RIGHT OUTER JOIN orders
+ON customers.id = orders.customer_id
+RIGHT OUTER JOIN employee
 ON  orders.id = employee.id;
 
 
-# Cross Join : cartesian product >> the first table is crossed with the decond table and permutations returned in t he result
+# Cross Join : Cartesian Product >> the first table is crossed with the second table and permutations returned in t he result
 select customers.id, customers.name, orders.amount, employee.name as "agent" from customers
 CROSS JOIN orders
 CROSS JOIN employee;
@@ -92,11 +96,8 @@ where a.salary < b.salary
 ORDER BY a.salary DESC;
 
 
-
-
-
-
-
-
-
-
+# Cleanup
+drop table if exists customers;
+drop table if exists employee;
+drop table if exists orders;
+drop database if exists emp_order;
